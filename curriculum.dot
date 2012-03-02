@@ -1,0 +1,67 @@
+graph g {
+	// edge [len=1.5];
+	// node [shape=rectangle];
+	
+	101    [label="Open 101"];
+	U101   [label="Ubuntu 101"];
+	U102   [label="Ubuntu 101"];
+	U201   [label="Ubuntu 201"];
+	VC101  [label="VC 101"];
+	IT101  [label="Bug Tracking 101"];
+	B101   [label="Building 101"];
+	B401   [label="Building 401"];
+	P101   [label="Pkg. 101"]; //Debian
+	P102   [label="Pkg. 102"]; //Red Hat
+	DOC101 [label="Doc. 101"];
+	CLI101 [label="CLI 101"];
+	HW101  [label="Hardware 101"]; // Arduino
+	G101   [label="Graphics 101"]; // Inkscape
+	G102   [label="Graphics 102"]; // GIMP
+	G201   [label="Graphics 201"]; // Blender
+	PR101  [label="Productivity"];
+	WS101  [label="Web Safety"];
+	DS101  [label="Data Safety"];
+	T101   [label="Trbl. Shooting"];
+	WD101  [label="Drupal 101"];
+	GIS101 [label="GIS 101"];
+	SA101  [label="SA 101"];
+	SA102  [label="SA 102"];
+	SA201  [label="Config. Mng."];
+		
+	101 -- U101;
+	101 -- PR101;
+	101 -- CLI101;
+	101 -- HW101;
+	101 -- G101;
+	101 -- WD101;
+	101 -- GIS101;
+	101 -- IT101;
+	101 -- WS101;
+	101 -- DS101;
+	
+	CLI101 -- VC101;
+	CLI101 -- SA101;
+
+	U101 -- U102;
+	U102 -- U201;
+	U101 -- T101;
+
+	G101 -- G102;
+	G102 -- G201;
+
+	SA101 -- SA102;
+	SA102 -- SA201;
+
+	VC101 -- B101;
+
+	U101 -- DOC101;
+	VC101 -- DOC101;
+	IT101 -- DOC101;
+
+	IT101 -- B101;
+	
+	B101 -- P101;
+	B101 -- P102;
+	B101 -- B401;
+	
+}
