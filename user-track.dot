@@ -1,0 +1,21 @@
+graph g {
+	# nodes.doth
+	
+	g [label="User Track", shape="rectangle"];
+	g -- 101;
+	101 -- PR101;
+	101 -- U101;
+	U101 -- U102;
+	U102 -- U201;
+	U101 -- T101;
+	g -- WS101;
+	g -- DS101;
+
+	U201 -- B401 [style="dashed"];
+
+	U101 -- G101 [style="dashed"];
+	G101 -- G102 [style="dashed"];
+	G102 -- G201 [style="dashed"];
+
+	g -- GIS101 [style="dashed"];
+}

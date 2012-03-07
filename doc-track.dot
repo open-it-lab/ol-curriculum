@@ -1,0 +1,14 @@
+graph g {
+	# nodes.doth
+	
+	g [label="Doc. Track", shape="rectangle"];
+	g -- CLI101;
+	g -- IT101;
+	g -- U101;
+	CLI101 -- VC101;
+	IT101 -- DOC101;
+	U101 -- DOC101;
+	DOC101 -- G101 [style="dashed"];
+	VC101 -- DOC101;
+	DOC101 -- DOC102;
+}

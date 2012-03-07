@@ -1,0 +1,15 @@
+graph g {
+	# nodes.doth
+	
+	g [label="Designer Track", shape="rectangle"];
+	
+	g -- G101;
+	G101 -- G102;
+	G102 -- G201;
+
+	g -- WS101 [style="dashed"];
+	G101 -- WD101 [style="dashed"];
+	WD101 -- WD102 [style="dashed"];
+
+	G102 -- UI101 [style="dashed"];
+}

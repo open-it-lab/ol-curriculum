@@ -1,0 +1,18 @@
+graph g {
+	# nodes.doth
+	
+	g [label="Developer Track", shape="rectangle"];
+	g -- CLI101;
+	g -- IT101 [style="dashed"];
+	CLI101 -- VC101;
+	VC101 -- B101 [style="dashed"];
+	VC101 -- VC201;
+	B101 -- PKG101;
+	PKG101 -- PKG102;
+	VC101 -- WD101 [style="dashed"];
+	WD101 -- WD102 [style="dashed"];
+	VC201 -- WD201;
+	WD101 -- WD201;
+	VC201 -- P101 [style="dashed"];
+	P101 -- P102;
+}
