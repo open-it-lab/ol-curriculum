@@ -1,6 +1,10 @@
 graph g {
 	# nodes.doth
-	
+
+	deliver1 [label="D:Program",shape="rectangle",color="gray"];	
+	deliver2 [label="D:Website",shape="rectangle",color="gray"];	
+	deliver3 [label="D:Contr. Package",shape="rectangle",color="gray"];
+
 	g [label="Developer Track", shape="rectangle"];
 	g -- CLI101;
 	g -- IT101 [style="dashed"];
@@ -15,4 +19,13 @@ graph g {
 	WD101 -- WD201;
 	VC201 -- P101 [style="dashed"];
 	P101 -- P102;
+
+	P101 -- deliver1;
+	P102 -- deliver1;
+
+	WD201 -- deliver2;
+	WD102 -- deliver2;
+
+	PKG101 -- deliver3;
+	PKG102 -- deliver3;
 }
