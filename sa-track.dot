@@ -1,5 +1,12 @@
 graph g {
 	# nodes.doth
+
+	deliver1 [label="D:Built Package",shape="rectangle",color="gray"];
+	deliver2 [label="D:Arduino Program",shape="rectangle",color="gray"];
+	deliver3 [label="D:Config Sys.",shape="rectangle",color="gray"];
+	deliver4 [label="D:Installed Sys.",shape="rectangle",color="gray"];
+	deliver5 [label="D:Installed Network",shape="rectangle",color="gray"];
+	deliver6 [label="D:Built Kernel",shape="rectangle",color="gray"];
 	
 	g [label="SA Track", shape="rectangle"];
 	g -- CLI101;
@@ -14,4 +21,12 @@ graph g {
 	PKG101 -- PKG102 [style="dashed"];
 	SA101 -- HW101;
 	T101 -- HW101;
+
+	PKG101 -- deliver1;
+	PKG102 -- deliver1;
+	HW101 -- deliver2;
+	SA101 -- deliver3;
+	SA102 -- deliver4;
+	SA201 -- deliver5;
+	B401 -- deliver6;
 }
