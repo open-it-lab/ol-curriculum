@@ -2,14 +2,28 @@ graph g {
 	# nodes.doth
 	
 	g [label="Designer Track", shape="rectangle"];
+
+	deliver1 [label="D:Logo",shape="rectangle",color="gray"];
+	deliver2 [label="D:Photo Design",shape="rectangle",color="gray"];
+	deliver3 [label="D:Animation",shape="rectangle",color="gray"];
+	deliver4 [label="D:UI Mockup",shape="rectangle",color="gray"];
+	deliver5 [label="D:Webpage Mockup",shape="rectangle",color="gray"];
+	deliver6 [label="D:Drupal Install",shape="rectangle",color="gray"];
 	
 	g -- G101;
 	G101 -- G102;
 	G102 -- G201;
 
+	G101 -- deliver1;
+	G102 -- deliver2;
+	G201 -- deliver3;
+
 	g -- WS101 [style="dashed"];
 	G101 -- WD101 [style="dashed"];
 	WD101 -- WD102 [style="dashed"];
+	WD101 -- deliver5;
+	WD102 -- deliver6;
 
 	G102 -- UI101 [style="dashed"];
+	UI101 -- deliver4;
 }
