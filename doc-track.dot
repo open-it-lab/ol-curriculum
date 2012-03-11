@@ -1,5 +1,9 @@
 graph g {
 	# nodes.doth
+
+	deliver1 [label="D:Revised Doc.",shape="rectangle",color="gray"];
+	deliver2 [label="D:Complete Doc.",shape="rectangle",color="gray"];
+	deliver3 [label="D:Doc. Graphics",shape="rectangle",color="gray"];
 	
 	g [label="Doc. Track", shape="rectangle"];
 	g -- CLI101;
@@ -11,4 +15,8 @@ graph g {
 	DOC101 -- G101 [style="dashed"];
 	VC101 -- DOC101;
 	DOC101 -- DOC102;
+
+	DOC101 -- deliver1;
+	DOC102 -- deliver2;
+	G101 -- deliver3;
 }
