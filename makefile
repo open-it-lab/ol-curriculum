@@ -8,11 +8,9 @@ all: $(IMAGES)
 	dot -Tpng $< > $@
 
 %.doto: %.dot
-	./mixin.sh $< $@
-	gvpr -c 'N[$$.degree==0]{delete(NULL,$$)}' $@ > $@.tmp
-	mv $@.tmp $@
+	cpp -P -undef -Wundef -std=c99 -nostdinc -Wtrigraphs \
+	   -fdollars-in-identifiers -C < $< | \
+		gvpr -c 'N[$$.degree==0]{delete(NULL,$$)}' > $@
 
 clean:
-	-rm $(IMAGES)
-	-rm $(OBJECTS)
-	-rm *~
+	-rm $(IMAGES) $(OBJECTS) *~

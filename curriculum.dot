@@ -2,7 +2,7 @@ graph g {
 	// edge [len=1.5];
 	// node [shape=rectangle];
 	
-	# nodes.doth
+	#include "nodes.doth"
 		
 	101 -- U101;
 	101 -- PR101;

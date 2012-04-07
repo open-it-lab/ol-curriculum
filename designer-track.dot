@@ -1,5 +1,5 @@
 graph g {
-	# nodes.doth
+	#include "nodes.doth"
 	
 	g [label="Designer Track", shape="rectangle"];
 

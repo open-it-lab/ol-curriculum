@@ -1,5 +1,5 @@
 graph g {
-	# nodes.doth
+	#include "nodes.doth"
 
 	deliver1 [label="D:Revised Doc.",shape="rectangle",color="gray"];
 	deliver2 [label="D:Complete Doc.",shape="rectangle",color="gray"];

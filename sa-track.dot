@@ -1,5 +1,5 @@
 graph g {
-	# nodes.doth
+	#include "nodes.doth"
 
 	deliver1 [label="D:Built Package",shape="rectangle",color="gray"];
 	deliver2 [label="D:Arduino Program",shape="rectangle",color="gray"];
